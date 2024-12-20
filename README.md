@@ -10,6 +10,8 @@ A simple comparison-based sorting algorithm used to arrange elements in a linear
 #### Intuition
 Assume current index is the smallest element in the array or list. Iterate over the remaining portion of the array to find the smallest element compared to the one at the current index. Swap and repeat until end of the array is reached.
 
-Time complexity: O(N^2) for all cases (Best, Average, Worst)
-Space complexity: O(1) - sorts in place
-Practice problem: https://www.geeksforgeeks.org/problems/selection-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=selection-sort
+### Complexity
+Time: O(N^2) for all cases (Best, Average, Worst)<br> 
+Space: O(1) - sorts in place, does not require extra storage <br> 
+
+**Practice problem:** https://www.geeksforgeeks.org/problems/selection-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=selection-sort
