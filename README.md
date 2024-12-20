@@ -1,2 +1,2 @@
-# data-structures-and-algorithms
-Just a noob trying to get good at Data Structures and Algorithms.
+# data structures and algorithms
+This repository contains solutions to various Data Structures and Algorithms problems. It serves as a personal practice collection to strengthen problem-solving skills. Solutions are implemented in Python
