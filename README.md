@@ -1,8 +1,8 @@
 # Data structures and algorithms
 
-This repository contains solutions to various Data Structures and Algorithms problems. It serves as a personal practice collection to strengthen problem-solving skills. Solutions are implemented in Python
+This repository contains solutions to various Data Structures and Algorithms problems. It serves as a personal practice collection to strengthen problem-solving skills. Solutions are implemented in Python <br>
 
-## Sorting algorithms
+# Sorting algorithms
 
 ### Selection sort
 A simple comparison-based sorting algorithm used to arrange elements in a linear data structures such an array in ascending or descending order.
