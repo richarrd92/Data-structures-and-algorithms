@@ -5,7 +5,7 @@ This script allows you to sort an array using various sorting algorithms. You ca
 ### How to Run the Script
 
 1. Save the script to a file, e.g., `sorting_algorithms.py`.
-2. Run it from the terminal using the following format:
+2. Run it from the terminal using the following format algorithms = ["selection", "bubble", "insertion", "merge"]:
 
    ```bash
    python3 sorting_algorithms.py <algorithm> [size] [max_value]
@@ -14,3 +14,4 @@ This script allows you to sort an array using various sorting algorithms. You ca
 
    ```bash
    python3 sorting_algorithms.py --help
+
