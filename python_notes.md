@@ -1,4 +1,4 @@
-# Python Built-In Functions and Concepts
+# Python 
 
 ### Common Built-In Functions
 - **`isdigit()`**: Returns `True` if the character is a digit.
