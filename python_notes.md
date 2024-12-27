@@ -5,7 +5,8 @@
 - **`str()`**: Converts to a string.
 - **`reversed()`**: Reverses a variable but returns an iterator object.
 - **`[::-1]`**: Reverses using slicing.
-- **`sys.maxsize`**: smallest possible int. Must import sys
+- **`sys.maxsize`**: largest possible int. Must import sys
+- **`float('inf')`**: represents positive infinity in Python
 
 ---
 
