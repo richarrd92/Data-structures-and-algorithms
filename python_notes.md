@@ -7,6 +7,8 @@
 - **`[::-1]`**: Reverses using slicing.
 - **`sys.maxsize`**: largest possible int. Must import sys
 - **`float('inf')`**: represents positive infinity in Python
+- **`max(item1, item2)`**: returns the max element between item1 and item2
+- **`min(item1, item2)`**: returns the min element between item1 and item2
 
 ---
 
