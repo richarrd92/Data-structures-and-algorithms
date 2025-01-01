@@ -32,12 +32,10 @@
   print(x)  # Original list remains unchanged: [5, 2, 9, 1, 7]
 ```
 
-
 ```
   names = ["John", "Alice", "Bob"]
-  sorted_names = sorted(names, key=len) 
+  sorted_names = sorted(names, key=len)  # ['Bob', 'John', 'Alice']
 ```
-
 
 ```
   x = [3, 1, 4, 1, 5]
@@ -47,12 +45,11 @@
 ```
   dictionary = {3: 'c', 1: 'a', 2: 'b'}
   sorted_keys = sorted(dictionary)  # Returns [1, 2, 3]
-  print(sorted_keys)
 ```
 
 ##### Comparison with .sort()
 
-.sort() is a method for lists that sorts the list in place and returns None.
+.sort() is a method for lists that sorts the list in place and returns None. <br>
 sorted() creates a new sorted list without modifying the original.
 
 ```
@@ -62,7 +59,6 @@ sorted() creates a new sorted list without modifying the original.
 ```
 
 ---
-
 
 ### Lists
 
@@ -206,4 +202,7 @@ sorted() creates a new sorted list without modifying the original.
     ```
 
 ---
-````
+
+```
+
+```
