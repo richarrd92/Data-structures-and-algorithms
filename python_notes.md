@@ -30,7 +30,7 @@
     y = sorted(x)  # Returns [1, 2, 5, 7, 9]
     print(y)  # [1, 2, 5, 7, 9]
     print(x)  # Original list remains unchanged: [5, 2, 9, 1, 7] 
-  ```
+
 
 ```python
 names = ["John", "Alice", "Bob"]
