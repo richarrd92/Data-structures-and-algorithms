@@ -25,37 +25,41 @@
   - False (default): Sorts in ascending order.
   - True: Sorts in descending order.
 
-```python
+```
   x = [5, 2, 9, 1, 7]
   y = sorted(x)  # Returns [1, 2, 5, 7, 9]
   print(y)  # [1, 2, 5, 7, 9]
-  print(x)  # Original list remains unchanged: [5, 2, 9, 1, 7] 
+  print(x)  # Original list remains unchanged: [5, 2, 9, 1, 7]
+```
 
 
-```python
+```
   names = ["John", "Alice", "Bob"]
   sorted_names = sorted(names, key=len) 
+```
 
 
-```python
+```
   x = [3, 1, 4, 1, 5]
   y = sorted(x, reverse=True)  # Returns [5, 4, 3, 1, 1]
+```
 
-```python
+```
   dictionary = {3: 'c', 1: 'a', 2: 'b'}
   sorted_keys = sorted(dictionary)  # Returns [1, 2, 3]
   print(sorted_keys)
+```
 
 ##### Comparison with .sort()
 
 .sort() is a method for lists that sorts the list in place and returns None.
 sorted() creates a new sorted list without modifying the original.
 
-```python
+```
   x = [3, 1, 4]
   x.sort()  # x is now [1, 3, 4]
   y = sorted(x)  # y is [1, 3, 4], but x is unchanged
-
+```
 
 ---
 
