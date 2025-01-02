@@ -14,6 +14,8 @@
 - **`chr(ascii_value)`**: returns the character corresponding to an integer's ASCII value
 - **`int(numeric_char)`**: returns integer representation of numeric char
 - **`sorted(data_structure)`**: Sorts the data struture
+- **`[*list]`**: Spread operator used to unpack and list into new list as a copy 
+- **`{**dictionary}`**: Spread operator used to unpack and dictionary into new new dictionary as a copy 
 
 ---
 
