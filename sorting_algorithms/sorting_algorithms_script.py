@@ -5,6 +5,8 @@ import argparse # parse command-line arguments
 def generate_array(size, max_value):
     return [int(random.random() * max_value) for _ in range(size)]
 
+
+
 # Complexity: Time O(N^2) - Space 0(1)
 def selection_sort(arr):
 
@@ -21,6 +23,7 @@ def selection_sort(arr):
         arr[i], arr[min_index] = arr[min_index], arr[i]
 
     return arr
+
 
 
 # Complexity: Time O(N^2) - Space O(1)
@@ -45,6 +48,7 @@ def bubble_sort(arr):
     return arr
 
 
+
 # Complexity: Time O(N^2) - Space O(1)
 def insertion_sort(arr):
 
@@ -59,6 +63,7 @@ def insertion_sort(arr):
 
     # Return the sorted array
     return arr
+
 
 
 # Complexity: Time O(N log N) - Space O(N)
@@ -95,6 +100,7 @@ def merge(arr, low, mid, high):
         arr[i] = temp_arr[i - low]  # Map temp_arr indices back to the array
 
 
+
 # Complexity: Time O(N log N) - Space O(N)
 def merge_sort(arr, low, high):
 
@@ -113,11 +119,37 @@ def merge_sort(arr, low, high):
     
     return arr
 
+
+
+# Complexity: Time O(N + K) - Space O(N + K) -> K = Buckets
+def bucket_sort(arr):
+    # Find the maximum value in the array to determine the bucket range
+    max_value = max(arr)
+    bucket_count = len(arr) # Number of buckets
+    bucket_range = (max_value + 1) / bucket_count # Range of each bucket
+
+    # Create empty buckets
+    buckets = [[] for _ in range(bucket_count)]
+
+    # Place each element in its corresponding bucket
+    for num in arr:
+        index = int(num / bucket_range) # Calculate the bucket index
+        buckets[index].append(num)
+
+    # Sort each bucket and concatenate them
+    sorted_arr = []
+    for bucket in buckets:
+        sorted_arr.extend(sorted(bucket)) # Concatenate sorted buckets
+
+    return sorted_arr
+
+
+
 # Main function
 if __name__ == "__main__":
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Sort an array using the specified algorithm.")
-    parser.add_argument("algorithm", choices=["selection", "bubble", "insertion", "merge"], help="Sorting algorithm to use.")
+    parser.add_argument("algorithm", choices=["selection", "bubble", "insertion", "merge", "bucket"], help="Sorting algorithm to use.")
     parser.add_argument("size", nargs="?", type=int, default=10, help="Number of elements in the array (default: 10).")
     parser.add_argument("max_value", nargs="?", type=int, default=100, help="Maximum value of elements in the array (default: 100).")
     args = parser.parse_args()
@@ -125,6 +157,7 @@ if __name__ == "__main__":
     # Generate array and sort it
     arr = generate_array(args.size, args.max_value)
     
+    # Print the unsorted array
     if args.algorithm == "selection":
         print("SELECTION SORT: ")
         print(f"Unsorted -> {arr}")
@@ -141,5 +174,9 @@ if __name__ == "__main__":
         print("MERGE SORT: ")
         print(f"Unsorted -> {arr}")
         sorted_arr = merge_sort(arr, 0, len(arr) - 1)
+    elif args.algorithm == "bucket":
+        print("BUCKET SORT: ")
+        print(f"Unsorted -> {arr}")
+        sorted_arr = bucket_sort(arr)
 
-    print(f"Sorted ->   {sorted_arr}")
+    print(f"Sorted ->   {sorted_arr}") # Print the sorted array
