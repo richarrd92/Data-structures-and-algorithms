@@ -15,7 +15,9 @@
 - **`int(numeric_char)`**: returns integer representation of numeric char
 - **`sorted(data_structure)`**: Sorts the data struture
 - **`[*list]`**: Spread operator used to unpack and list into new list as a copy 
-- **`{**dictionary}`**: Spread operator used to unpack and dictionary into new new dictionary as a copy 
+- **`{**dictionary}`**: Spread operator used to unpack and dictionary into new new dictionary as a copy
+- **`list.append(element)`**: Adds a single element to the end of the list. if iterable (e.g., list, tuple) adds as a single whole 
+- **`list.extend(iterable)`**: Adds each element from the iterable (e.g., list, tuple) to the end of the list.
 
 ---
 
