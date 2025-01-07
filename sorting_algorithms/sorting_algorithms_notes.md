@@ -39,16 +39,28 @@ Space: O(1) - sorts in place, does not require extra storage <br>
 
 ---
 
+#### Bucket sort
+
+First, find the maximum value in the array to determine the range for the buckets. Then, create a number of empty buckets, where the number of buckets is equal to the length of the array. Each element from the array is placed in its corresponding bucket based on its value. Once all the elements are placed in the appropriate buckets, each bucket is sorted individually. Finally, all the sorted buckets are concatenated to form the final sorted array.
+
+##### Complexity
+
+Time: O(N + N log N) on average (due to the sorting of individual buckets). Best case O(N) when all elements are uniformly distributed and already sorted.<br>
+Space: O(N) for storing the elements in buckets.<br>
+
+**Practice problem:** N/A
+
+---
+
 #### Merge sort
 
 Assume the entire array is initially unsorted. In the first step, divide the array into two halves. Recursively divide each half into two smaller halves until each subarray contains a single element, which is considered sorted. Then, begin merging the subarrays back together. In each merge step, compare the elements of the two subarrays and combine them in order, ensuring that the resulting array is sorted. This process continues until all subarrays have been merged back into a single sorted array.
 
 ##### Complexity
 
-Time: O(N log N) for all cases (Best, Average, Worst)<br> 
+Time: O(N log N) for all cases (Best, Average, Worst)<br>
 Space: O(N) - requires additional space for the temporary arrays used during merging.<br>
 
 **Practice problem:** https://www.geeksforgeeks.org/problems/merge-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=merge-sort
 
 ---
-
