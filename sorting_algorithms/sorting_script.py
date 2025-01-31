@@ -123,6 +123,7 @@ def merge_sort(arr, low, high):
 
 # Complexity: Time O(N + K) - Space O(N + K) -> K = Buckets
 def bucket_sort(arr):
+    
     # Find the maximum value in the array to determine the bucket range
     max_value = max(arr)
     bucket_count = len(arr) # Number of buckets
