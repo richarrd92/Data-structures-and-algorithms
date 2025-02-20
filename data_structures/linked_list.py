@@ -1,3 +1,5 @@
+# 
+
 class Node:
     # initialize node of linked list
     def __init__(self, data=None, next=None):
@@ -21,7 +23,7 @@ class LinkedList:
     # insert node at the end of linked list
     def insert_end(self, data):
         # list is empty
-        if self.is_empty():
+        if self.empty():
             self.head = Node(data, self.head)
             self.node_count += 1
             return
@@ -62,7 +64,7 @@ class LinkedList:
         self.node_count += 1  # Increment node count
     
     # Linked list is empty
-    def is_empty(self) -> bool:
+    def empty(self) -> bool:
         return self.head is None
     
     # returns count of nodes in linked list
@@ -72,7 +74,7 @@ class LinkedList:
     # remove node at the start of linked list
     def remove_start(self):
         # linked list is empty
-        if self.is_empty():
+        if self.empty():
             print("Linked List is Empty")
             return
         
@@ -91,7 +93,7 @@ class LinkedList:
     # remove node at given position in the linked list
     def remove_position(self, position: int):
         # linked list is empty
-        if self.is_empty():
+        if self.empty():
             print("Linked List is Empty")
             return 
         
@@ -124,7 +126,7 @@ class LinkedList:
 
     # Reverse Linked list
     def reverse_list(self):
-        if self.is_empty():
+        if self.empty():
             print("Linked List is Empty")
             return
         
@@ -145,7 +147,7 @@ class LinkedList:
         
     # Print the Linked List
     def print_list(self):
-        if self.is_empty():
+        if self.empty():
             print("Linked List is empty")
             return 
         
