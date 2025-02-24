@@ -1,12 +1,12 @@
 import sys
+import os
 
-# path to custom_functions
-sys.path.append("/Users/richa/OneDrive/Documents/SCHOOL/CODING/DSA/custom_functions")
+# Add the parent directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-# Import the function directly
-from generate_array import generate_array # type: ignore
+from custom_library import generate_array  
 
-# Call the function properly
+# Call the function 
 arr = generate_array()  
 print("UNSORTED ARRAY:", arr)
 

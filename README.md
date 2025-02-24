@@ -1,7 +1,14 @@
-# Data Structures and Algorithms
+# **Data Structures and Algorithms**
 
-This repository contains solutions to various Data Structures and Algorithms problems. It serves as a personal practice collection to strengthen problem-solving skills and deepen my understanding of algorithms and data structures. <br>
+This repository contains implementations of various data structures and algorithms, serving as a personal practice collection to enhance problem-solving skills and deepen my understanding of algorithmic concepts.
 
-I will be practicing problems on platforms like LeetCode, GeeksforGeeks, HackerRank, and documenting my approach, solutions, and thought processes as much as possible.<br>
+## **Contents**
+- Sorting algorithms (e.g., Quick Sort, Merge Sort, Bucket Sort)  
+- Searching algorithms (e.g., Binary Search, Linear Search)  
+- Data structures (e.g., Linked Lists, Stacks, Queues, Trees, Graphs)  
+- Advanced topics (e.g., Dynamic Programming, Graph Algorithms, Heaps)  
 
-The goal of this repository is to master Data Structures and Algorithms, continually improving my problem-solving skills and my ability to tackle complex technical challenges efficiently.
+## **Purpose**
+- Strengthen problem-solving skills  
+- Gain deeper insights into algorithmic efficiency and complexity  
+- Build a reference for future projects and technical interviews

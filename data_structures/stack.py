@@ -32,6 +32,7 @@ class Stack:
             current = current.next
         print("---")  # End of stack
     
+    # Implement other methods and simple algorithms
 
 if __name__ == '__main__':
     # Menu driven program 
