@@ -1,5 +1,3 @@
-# FUNCTION TO SOLVE SIMPLE PROBLEMS
-
 # given a number in integer form
 # returns a list of prime numbers up to number
 def find_primes(n: int) -> list:

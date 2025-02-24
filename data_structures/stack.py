@@ -1,4 +1,4 @@
-# stack implementation with linked list
+# stack implementation with Stack
  
 class Node:
     # initialize node 
@@ -25,21 +25,34 @@ class Stack:
             return
 
         current = self.top
-        print("Stack contents:")
+        print("Stack contents:\n")
+        print("---")
         while current:
-            print(current.data, end=" -> " if current.next else "")  # Only print "->" if there's a next node
-        current = current.next
-        print("")  # End of stack
+            print(current.data)
+            current = current.next
+        print("---")  # End of stack
     
 
 if __name__ == '__main__':
-    # menu driven program
+    # Menu driven program 
     stack = Stack()
-    stack.print_stack()
-    stack.push(23)
-    stack.print_stack()
-    stack.push(23)
-    stack.push(23)
-    stack.push(23)
-    stack.push(23)
-    stack.print_stack()
+
+    while True:
+        print("\n----- Stack Menu -----")
+        print("1. Push item")
+        print("2. Print Stack")
+        print("3. Exit")
+        
+        choice = input("\nEnter your choice: ")
+
+        if choice == '1':
+            data = int(input("Push data on stack: "))
+            stack.push(data)
+        elif choice == '2':
+            stack.print_stack()
+        elif choice == '3':
+            print("\nExiting program...")
+            break
+        else:
+            print("Invalid choice! Please try again.")
+

@@ -1,4 +1,4 @@
-# 
+# Singly linked list implementation
 
 class Node:
     # initialize node of linked list
