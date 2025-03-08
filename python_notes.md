@@ -3,9 +3,19 @@
 ### Common Built-In Functions
 
 - **`isdigit()`**: Returns `True` if the character is a digit.
+- **`islower()`**: Returns `True` if the character is lowercase.
+- **`isupper()`**: Returns `True` if the character is uppercase.
+- **`len()`**: Returns the length of a variable.
+- **`type()`**: Returns the type of a variable.
+- **`abs()`**: Returns the absolute value of a number.
+- **`round()`**: Returns the rounded value of a number.
+- **`pow()`**: Raises a number to a power.
+- **`sum()`**: Returns the sum of all elements in an iterable.
+- **`chr()`**: Returns the character corresponding to an integer's ASCII value.
 - **`str()`**: Converts to a string.
 - **`reversed()`**: Reverses a variable but returns an iterator object.
 - **`[::-1]`**: Reverses using slicing.
+- **`[-1]`**: returns the last element of a list
 - **`sys.maxsize`**: largest possible int. Must import sys
 - **`float('inf')`**: represents positive infinity in Python
 - **`max(item1, item2)`**: returns the max element between item1 and item2

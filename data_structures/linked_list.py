@@ -143,8 +143,30 @@ class LinkedList:
 
         # update head of linked list
         self.head = prev_node 
+        print("Linked List Reversed")
+        return
     
-        
+
+    # Search Linked List
+    def search_list(self, data):
+        if self.empty():
+            print("Linked List is Empty")
+            return
+
+        # search for data in linked list
+        temp_head = self.head
+        position = 1
+        while temp_head:
+            if temp_head.data == data:
+                print(f"Found {data} at position {position}")
+                return
+            temp_head = temp_head.next
+            position += 1   
+
+        print(f"{data} not found in Linked List")
+        return
+    
+    
     # Print the Linked List
     def print_list(self):
         if self.empty():
@@ -175,7 +197,8 @@ if __name__ == '__main__':
         print("6. Remove from Position")
         print("7. Print Linked List")
         print("8. Reverse Linked List")
-        print("9. Exit")
+        print("9. Search Linked List")
+        print("0. Exit")
         
         choice = input("\nEnter your choice: ")
 
@@ -201,6 +224,9 @@ if __name__ == '__main__':
         elif choice == '8':
             linked_list.reverse_list()
         elif choice == '9':
+            data = int(input("Enter value to search: "))
+            linked_list.search_list(data)
+        elif choice == '0':
             print("\nExiting program...")
             break
         else:
