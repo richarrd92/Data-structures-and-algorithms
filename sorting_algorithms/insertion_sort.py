@@ -1,29 +1,24 @@
-import sys
-import os
+from data import generate_array  # Import the generate_array function from data.py
 
-# Add the parent directory to sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Generate the random array using the function from data.py
+random_array = generate_array(size=10, max_value=20)
 
-from custom_library import generate_array 
-
-# Call the function
-arr = generate_array()  
-print("UNSORTED ARRAY:", arr)
+print("UNSORTED ARRAY:", random_array)
 
 
 # Complexity: Time O(N^2) - Space O(1)
-def insertion_sort(arr):
+def insertion_sort(random_array):
 
     # Iterate through the entire array starting from the second element
-    for i in range(1, len(arr)):
+    for i in range(1, len(random_array)):
         j = i
         # Compare and shift elements that are larger than the current element
-        while j > 0 and arr[j] < arr[j - 1]:
+        while j > 0 and random_array[j] < random_array[j - 1]:
             # Swap the elements to place the current element in the correct position
-            arr[j], arr[j - 1] = arr[j - 1], arr[j]
+            random_array[j], random_array[j - 1] = random_array[j - 1], random_array[j]
             j = j - 1
 
     # Return the sorted array
-    return arr
+    return random_array
 
-print("SORTED ARRAY:  ", insertion_sort(arr))
+print("SORTED ARRAY:  ", insertion_sort(random_array))

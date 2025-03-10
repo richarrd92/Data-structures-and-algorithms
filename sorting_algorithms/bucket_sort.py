@@ -1,29 +1,24 @@
-import sys
-import os
+from data import generate_array  # Import the generate_array function from data.py
 
-# Add the parent directory to sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Generate the random array using the function from data.py
+random_array = generate_array(size=10, max_value=20)
 
-from custom_library import generate_array
-
-# Call the function
-arr = generate_array()  
-print("UNSORTED ARRAY:", arr)
+print("UNSORTED ARRAY:", random_array)
 
 
 # Complexity: Time O(N + K) - Space O(N + K) -> K = Buckets
-def bucket_sort(arr):
+def bucket_sort(random_array):
     
     # Find the maximum value in the array to determine the bucket range
-    max_value = max(arr)
-    bucket_count = len(arr) # Number of buckets
+    max_value = max(random_array)
+    bucket_count = len(random_array) # Number of buckets
     bucket_range = (max_value + 1) / bucket_count # Range of each bucket
 
     # Create empty buckets
     buckets = [[] for _ in range(bucket_count)]
 
     # Place each element in its corresponding bucket
-    for num in arr:
+    for num in random_array:
         index = int(num / bucket_range) # Calculate the bucket index
         buckets[index].append(num)
 
@@ -34,4 +29,4 @@ def bucket_sort(arr):
 
     return sorted_arr
 
-print("SORTED ARRAY:  ", bucket_sort(arr))
+print("SORTED ARRAY:  ", bucket_sort(random_array))

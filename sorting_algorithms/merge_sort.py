@@ -1,18 +1,13 @@
-import sys
-import os
+from data import generate_array  # Import the generate_array function from data.py
 
-# Add the parent directory to sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Generate the random array using the function from data.py
+random_array = generate_array(size=10, max_value=20)
 
-from custom_library import generate_array 
-
-# Call the function
-arr = generate_array()  
-print("UNSORTED ARRAY:", arr)
+print("UNSORTED ARRAY:", random_array)
 
 
 # Complexity: Time O(N log N) - Space O(N)
-def merge(arr, low, mid, high):
+def merge(random_array, low, mid, high):
 
     # Initialize pointers for both halves
     left_pointer = low       # Pointer for the left half
@@ -21,47 +16,47 @@ def merge(arr, low, mid, high):
 
     # Merge the two halves until one of them is exhausted
     while left_pointer <= mid and right_pointer <= high:
-        if arr[left_pointer] <= arr[right_pointer]:
+        if random_array[left_pointer] <= random_array[right_pointer]:
             # Append the smaller element from the left half
-            temp_arr.append(arr[left_pointer])
+            temp_arr.append(random_array[left_pointer])
             left_pointer += 1
         else:
             # Append the smaller element from the right half
-            temp_arr.append(arr[right_pointer])
+            temp_arr.append(random_array[right_pointer])
             right_pointer += 1
 
     # Copy any remaining elements from the left half
     while left_pointer <= mid:
-        temp_arr.append(arr[left_pointer])
+        temp_arr.append(random_array[left_pointer])
         left_pointer += 1
 
     # Copy any remaining elements from the right half
     while right_pointer <= high:
-        temp_arr.append(arr[right_pointer])
+        temp_arr.append(random_array[right_pointer])
         right_pointer += 1
 
     # Write the sorted elements back into the original array
     for i in range(low, high + 1):
-        arr[i] = temp_arr[i - low]  # Map temp_arr indices back to the array
+        random_array[i] = temp_arr[i - low]  # Map temp_arr indices back to the array
 
 
 
 # Complexity: Time O(N log N) - Space O(N)
-def merge_sort(arr, low, high):
+def merge_sort(random_array, low, high):
 
     if low < high:
         # Calculate the middle index of the range
         mid = (low + high) // 2
 
         # Recursively sort the left half of the range
-        merge_sort(arr, low, mid)
+        merge_sort(random_array, low, mid)
 
         # Recursively sort the right half of the range
-        merge_sort(arr, mid + 1, high)
+        merge_sort(random_array, mid + 1, high)
 
         # Merge the two sorted halves
-        merge(arr, low, mid, high)
+        merge(random_array, low, mid, high)
     
-    return arr
+    return random_array
 
-print("SORTED ARRAY:  ", merge_sort(arr, 0, len(arr) - 1))
+print("SORTED ARRAY:  ", merge_sort(random_array, 0, len(random_array) - 1))

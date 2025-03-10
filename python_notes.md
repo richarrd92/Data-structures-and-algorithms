@@ -1,5 +1,137 @@
 # Python
 
+### Common Built-in Data Structures and Their Functions
+
+#### List
+A list is an ordered, mutable collection of elements.
+
+- **Initialization**: `x = []`
+- **Adding Elements**:
+  - `x.append(item)` – Adds `item` to the end of the list.
+  - `x.insert(index, item)` – Inserts `item` at a specified `index`.
+  - `x.extend(iterable)` – Adds all elements from an iterable (list, tuple, etc.) to the end of the list.
+  
+- **Accessing Elements**:
+  - `x[index]` – Access element at `index`.
+  - `x[index:start:step]` – Slice the list from `index` to `start` with a given `step`.
+  - `x[-1]` – Access the last element.
+  
+- **Removing Elements**:
+  - `x.pop()` – Removes and returns the last item.
+  - `x.pop(index)` – Removes and returns the item at the given `index`.
+  - `x.remove(item)` – Removes the first occurrence of `item`.
+  - `del x[index]` – Deletes item at `index`.
+  
+- **Other Methods**:
+  - `x.sort()` – Sorts the list in place.
+  - `x.reverse()` – Reverses the order of the list.
+  - `x.count(item)` – Returns the count of `item` in the list.
+  - `x.index(item)` – Returns the index of the first occurrence of `item`.
+  - `x.clear()` – Removes all elements from the list.
+  - `x.copy()` – Returns a shallow copy of the list.
+
+
+#### Tuple
+A tuple is an ordered, immutable collection of elements.
+
+- **Initialization**: `x = ()`
+- **Accessing Elements**: `x[index]` – Access element at `index`.
+- **Other Methods**:
+  - `x.count(item)` – Returns the count of `item` in the tuple.
+  - `x.index(item)` – Returns the index of the first occurrence of `item`.
+
+#### Set
+A set is an unordered collection of unique elements.
+
+- **Initialization**: `x = set()`
+- **Adding Elements**:
+  - `x.add(item)` – Adds `item` to the set.
+  - `x.update(iterable)` – Adds all elements from an iterable (list, tuple, etc.) to the set.
+  
+- **Removing Elements**:
+  - `x.remove(item)` – Removes `item` from the set. Raises a KeyError if `item` is not found.
+  - `x.discard(item)` – Removes `item` from the set. Does not raise an error if `item` is not found.
+  - `x.pop()` – Removes and returns an arbitrary element.
+  
+- **Other Methods**:
+  - `x.clear()` – Removes all elements from the set.
+  - `x.copy()` – Returns a shallow copy of the set.
+  - `x.union(set2)` – Returns a new set with all elements from both sets.
+  - `x.intersection(set2)` – Returns a new set with common elements from both sets.
+  - `x.difference(set2)` – Returns a new set with elements in `x` but not in `set2`.
+  - `x.symmetric_difference(set2)` – Returns a new set with elements in either `x` or `set2`, but not both.
+
+
+#### Dictionary
+A dictionary is an unordered collection of key-value pairs.
+
+- **Initialization**: `x = {}` or `x = dict()`
+- **Adding/Updating Elements**: `x[key] = value` – Adds or updates `key` with `value`.
+- **Accessing Elements**: `x[key]` – Accesses the value associated with `key`.
+- **Removing Elements**:
+  - `del x[key]` – Removes the item with `key` from the dictionary.
+  - `x.pop(key)` – Removes and returns the value associated with `key`.
+  - `x.popitem()` – Removes and returns an arbitrary (key, value) pair.
+  
+- **Other Methods**:
+  - `x.keys()` – Returns a view object containing all keys.
+  - `x.values()` – Returns a view object containing all values.
+  - `x.items()` – Returns a view object containing all (key, value) pairs.
+  - `x.get(key)` – Returns the value for `key` or `None` if `key` is not found.
+  - `x.update(other_dict)` – Updates the dictionary with key-value pairs from `other_dict`.
+  - `x.clear()` – Removes all elements from the dictionary.
+  - `x.copy()` – Returns a shallow copy of the dictionary.
+  
+
+#### Queue (using `collections.deque`)
+A deque (double-ended queue) allows for efficient append and pop operations from both ends.
+
+- **Initialization**: `from collections import deque`<br> `queue = deque()`
+- **Adding Elements**:
+  - `queue.append(item)` – Adds `item` to the right end.
+  - `queue.appendleft(item)` – Adds `item` to the left end.
+  
+- **Removing Elements**:
+  - `queue.pop()` – Removes and returns the item from the right end.
+  - `queue.popleft()` – Removes and returns the item from the left end.
+  
+- **Other Methods**:
+  - `queue.clear()` – Removes all elements from the deque.
+  - `queue.extend(iterable)` – Adds all elements from `iterable` to the right end.
+  - `queue.extendleft(iterable)` – Adds all elements from `iterable` to the left end.
+  - `queue.rotate(n)` – Rotates the deque by `n` steps to the right. Negative `n` rotates to the left.
+
+
+#### Stack (using List)
+A stack is a collection that follows the Last In, First Out (LIFO) principle. Python lists can be used as stacks.
+
+- **Initialization**: `stack = []`
+- **Pushing to the Stack**:
+  - `stack.append(item)` – Adds `item` to the top of the stack.
+  
+- **Popping from the Stack**:
+  - `stack.pop()` – Removes and returns the top element of the stack.
+  
+- **Peeking at the Stack**:
+  - `stack[-1]` – Returns the top element without removing it.
+
+
+#### Heap (using `heapq`)
+A heap is a binary tree-based data structure that maintains the heap property (min-heap by default).
+
+- **Initialization**: `import heapq`<br> `heap = []`
+- **Adding Elements**:
+  - `heapq.heappush(heap, item)` – Adds `item` to the heap.
+  
+- **Removing Elements**:
+  - `heapq.heappop(heap)` – Removes and returns the smallest element (min-heap property).
+  
+- **Other Methods**:
+  - `heapq.heappushpop(heap, item)` – Pushes `item` to the heap and then pops and returns the smallest element.
+  - `heapq.heapify(list)` – Converts a list into a valid heap in-place.
+
+---
+
 ### Common Built-In Functions
 
 - **`isdigit()`**: Returns `True` if the character is a digit.
@@ -31,7 +163,7 @@
 
 ---
 
-### Sorted() function
+#### Sorted() function
 
 - **iterable**: The data structure to be sorted (e.g., lists, tuples, dictionaries).
 - **key (optional)**: A function that defines the sorting criteria. Default is None (sorts in ascending order).
@@ -61,7 +193,7 @@
   sorted_keys = sorted(dictionary)  # Returns [1, 2, 3]
 ```
 
-##### Comparison with .sort()
+#### .sort() function
 
 .sort() is a method for lists that sorts the list in place and returns None. <br>
 sorted() creates a new sorted list without modifying the original.
@@ -74,113 +206,54 @@ sorted() creates a new sorted list without modifying the original.
 
 ---
 
-### Lists
-
-- **List Initialization**: `x = []` (zero-indexed and mutable).
-- **Storing References**: Lists store references, not copies.
-- **Copying Lists**:
-  - `y = x[:]` creates a copy of `x`—changes to `x` do not affect `y`.
-- **Pop Operations**:
-  - `x.pop()` removes the last item (e.g., `5`) and prints it.
-  - `x.pop(index)` removes the value at the given index.
-- **Accessing List Elements**: `x[index]` accesses the value at the given index.
-
----
-
-### Tuples
-
-- **Tuple Initialization**: `x = ()` (uses parentheses).
-- **Immutability**: Tuples are immutable—cannot be changed.
-- **No Append/Remove**: Cannot append, remove, or change values in a tuple.
-
----
-
-### For Loop
+#### For Loop
 
 - **Syntax**:
   - `for i in range(stop)`
   - `for i in range(start, stop)`
   - `for i in range(start, stop, increment/step)`
 
----
-
-### While Loop
+#### While Loop
 
 - **Basic Syntax**: `while (condition)`
 
----
-
-### Slice Operator
+#### Slice Operator
 
 - **Syntax**: `x[start:stop:step]`, `x[start:]`, `x[:stop]`
 - **Description**: Picks a section of a data structure (e.g., list). Can also reverse the list with `x[::-1]`.
 
----
-
-### Set
-
-- **Equivalent**: Like an unordered set in C++.
-- **Properties**: Removes duplicates and stores elements unordered.
-- **Operations**: Supports union, intersection, and difference.
-- **Syntax**:
-  - `print(element in set)`
-
----
-
-### Dictionary
-
-- **Equivalent**: Like an unordered map in C++.
-- **Initialization**: `x = {key: value}`
-- **Adding/Accessing Values**:
-  - `x[key] = value`
-  - `x.keys()` to print keys.
-  - `x.values()` to print values.
-- **Removing Values**:
-  - `del x[key]` or `del x[value]`
-
----
-
-### Comprehensions
+#### Comprehensions
 
 - **List Comprehension**:
   - `x = [i for i in range(5)]`
   - `x = [i for i in range(5) for j in range(5)]`
 
----
-
-### Functions
+#### Functions
 
 - **Define a Function**:
   - `def func():`
 - **Return Values**: Functions can return any value or object.
 
----
 
-### Additional Functions
+#### Additional Functions
 
 - **`dir()`**: Lists all functions of a data type.
   - Example: `print(dir(str))`
 - **`help()`**: Provides documentation on functions.
   - Example: `print(help(str.upper))`
 
----
-
-### String Formatting
+#### String Formatting
 
 - **Old-style Formatting**:
   - `message = "Hello %s" % user_input`
 - **f-Strings**:
   - `message = f"Hello {user_input}"`
 
----
-
-### Iterator Concatenation
+#### Iterator Concatenation
 
 - **Joining Elements**: Use `"".join(list_or_tuple)` to join the strings in a list or tuple.
 
----
-
-### Arguments
+#### Arguments
 
 - **Variadic Arguments**:
   - `def mean(*args)` returns a tuple.
@@ -189,7 +262,7 @@ sorted() creates a new sorted list without modifying the original.
 
 ---
 
-### Files
+#### Files
 
 - **Reading a File**:
   - `my_file = open("file.txt")` (File must be in the same directory).
@@ -214,9 +287,3 @@ sorted() creates a new sorted list without modifying the original.
         my_file.seek(0)  # returns cursor to 0
         print(my_file.read())
     ```
-
----
-
-```
-
-```

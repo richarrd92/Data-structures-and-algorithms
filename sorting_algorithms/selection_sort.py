@@ -1,31 +1,26 @@
-import sys
-import os
+from data import generate_array  # Import the generate_array function from data.py
 
-# Add the parent directory to sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Generate the random array using the function from data.py
+random_array = generate_array(size=10, max_value=20)
 
-from custom_library import generate_array  
-
-# Call the function
-arr = generate_array()  
-print("UNSORTED ARRAY:", arr)
+print("UNSORTED ARRAY:", random_array)
 
 
 # Complexity: Time O(N^2) - Space 0(1)
-def selection_sort(arr):
+def selection_sort(random_array):
 
     # Iterate over array
-    for i in range(len(arr)):
+    for i in range(len(random_array)):
         min_index = i # assume current element is the smallest
 
         # find the smallest element in the remaining array
-        for j in range(i+1, len(arr)):
-            if arr[j] < arr[min_index]:
+        for j in range(i+1, len(random_array)):
+            if random_array[j] < random_array[min_index]:
                 min_index = j # update the smallest element index
 
         # Swap the current element with the smallest element found
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+        random_array[i], random_array[min_index] = random_array[min_index], random_array[i]
 
-    return arr
+    return random_array
 
-print("SORTED ARRAY:  ", selection_sort(arr))
+print("SORTED ARRAY:  ", selection_sort(random_array))

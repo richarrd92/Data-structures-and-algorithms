@@ -1,28 +1,23 @@
-import sys
-import os
+from data import generate_array  # Import the generate_array function from data.py
 
-# Add the parent directory to sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Generate the random array using the function from data.py
+random_array = generate_array(size=10, max_value=20)
 
-from custom_library import generate_array  
-
-# Call the function 
-arr = generate_array()  
-print("UNSORTED ARRAY:", arr)
+print("UNSORTED ARRAY:", random_array)
 
 
 # Complexity: Time O(N^2) - Space O(1)
-def bubble_sort(arr):
+def bubble_sort(random_array):
 
     # Iterate through the entire array
-    for i in range(len(arr)):
+    for i in range(len(random_array)):
         swapped = False  # Keep track of whether any swaps occurred in this pass
 
         # Compare adjacent elements up to the unsorted portion
-        for j in range(len(arr) - i - 1): 
-            if arr[j] > arr[j + 1]:
+        for j in range(len(random_array) - i - 1): 
+            if random_array[j] > random_array[j + 1]:
                 # Swap if elements are out of order
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                random_array[j], random_array[j + 1] = random_array[j + 1], random_array[j]
                 swapped = True  # Mark that a swap has occurred
 
         # If no swaps occurred during the pass, the array is already sorted - break out of loop
@@ -30,6 +25,6 @@ def bubble_sort(arr):
             break 
     
     # Return the sorted array after all passes are complete
-    return arr
+    return random_array
 
-print("SORTED ARRAY:  ", bubble_sort(arr))
+print("SORTED ARRAY:  ", bubble_sort(random_array))
