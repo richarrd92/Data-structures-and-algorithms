@@ -1,9 +1,10 @@
-from data import generate_array  # Import the generate_array function from data.py
+# UNCOMMENT TO USE FILE
+# from data import generate_array  # Import the generate_array function from data.py
 
-# Generate the random array using the function from data.py
-random_array = generate_array(size=10, max_value=20)
+# # Generate the random array using the function from data.py
+# random_array = generate_array(size=10, max_value=20)
 
-print("UNSORTED ARRAY:", random_array)
+# print("UNSORTED ARRAY:", random_array)
 
 
 # Complexity: Time O(N log N) - Space O(N)
@@ -59,4 +60,5 @@ def merge_sort(random_array, low, high):
     
     return random_array
 
-print("SORTED ARRAY:  ", merge_sort(random_array, 0, len(random_array) - 1))
+# UNCOMMENT TO USE FILE
+# print("SORTED ARRAY:  ", merge_sort(random_array, 0, len(random_array) - 1))

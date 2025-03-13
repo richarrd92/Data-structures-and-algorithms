@@ -1,9 +1,10 @@
-from data import generate_array  # Import the generate_array function from data.py
+# UNCOMMENT TO USE FILE
+# # from data import generate_array  # Import the generate_array function from data.py
 
-# Generate the random array using the function from data.py
-random_array = generate_array(size=10, max_value=20)
+# # Generate the random array using the function from data.py
+# random_array = generate_array(size=10, max_value=20)
 
-print("UNSORTED ARRAY:", random_array)
+# print("UNSORTED ARRAY:", random_array)
 
 
 # Complexity: Time O(N + K) - Space O(N + K) -> K = Buckets
@@ -29,4 +30,5 @@ def bucket_sort(random_array):
 
     return sorted_arr
 
-print("SORTED ARRAY:  ", bucket_sort(random_array))
+# UNCOMMENT TO USE FILE
+# print("SORTED ARRAY:  ", bucket_sort(random_array))

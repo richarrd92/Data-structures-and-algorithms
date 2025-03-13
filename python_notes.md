@@ -134,6 +134,10 @@ A heap is a binary tree-based data structure that maintains the heap property (m
 
 ### Common Built-In Functions
 
+- **`input()`**: Prompts the user for input and returns it as a string.
+- **`all()`**: Returns `True` if all elements in an iterable are `True`, otherwise `False`.
+- **`iterable[:]`**: Returns a shallow copy of the iterable eg list, tuple, or dictionary.
+- **`any()`**: Returns `True` if any element in an iterable is `True`, otherwise `False`.
 - **`isdigit()`**: Returns `True` if the character is a digit.
 - **`islower()`**: Returns `True` if the character is lowercase.
 - **`isupper()`**: Returns `True` if the character is uppercase.
