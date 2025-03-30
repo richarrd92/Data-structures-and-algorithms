@@ -134,6 +134,7 @@ A heap is a binary tree-based data structure that maintains the heap property (m
 
 ### Common Built-In Functions
 
+- **`Counter()`**: takes an iterable (like a list or string) and returns a dictionary-like object mapping elements to their counts.
 - **`input()`**: Prompts the user for input and returns it as a string.
 - **`all()`**: Returns `True` if all elements in an iterable are `True`, otherwise `False`.
 - **`iterable[:]`**: Returns a shallow copy of the iterable eg list, tuple, or dictionary.
